@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="Update gitignore">
       <change afterPath="$PROJECT_DIR$/src/Aircraft.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Combat.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Commercial.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Coordinates.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Missile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Avio.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -79,8 +75,30 @@
       <workItem from="1649869096505" duration="886000" />
       <workItem from="1650464836767" duration="813000" />
       <workItem from="1650469930036" duration="244000" />
-      <workItem from="1650470183933" duration="6230000" />
+      <workItem from="1650470183933" duration="6601000" />
     </task>
+    <task id="LOCAL-00001" summary="Update gitignore">
+      <created>1650480317184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650480317184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update gitignore">
+      <created>1650480404253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650480404253</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update .idea">
+      <created>1650480421547</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650480421547</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +114,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update gitignore" />
+    <MESSAGE value="Update .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
