@@ -58,4 +58,11 @@ public class Airport {
         else throw new RuntimeException("La pista no està lliure");
     }
 
+    public Aircraft AircraftByRegistration(String registration) {
+        for (Aircraft aircraft : airport) {
+            if (aircraft.getRegistration().equals(registration)) return aircraft;
+        }
+        return null;
+    }
+
 }
