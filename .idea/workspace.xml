@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="El array de misiles se crea solo y añadir autonomia">
-      <change afterPath="$PROJECT_DIR$/src/Airport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aircraft.java" afterDir="false" />
+    <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment=".idea update">
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650730495562</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".idea update">
+      <created>1650737487359</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650737487359</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created Airport.java and migrated some functions from other classes">
+      <created>1650737686991</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650737686991</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +149,9 @@
     <MESSAGE value="Update gitignore" />
     <MESSAGE value="Update .idea" />
     <MESSAGE value="El array de misiles se crea solo" />
-    <option name="LAST_COMMIT_MESSAGE" value="El array de misiles se crea solo" />
+    <MESSAGE value=".idea update" />
+    <MESSAGE value="Created Airport.java and migrated some functions from other classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Airport.java and migrated some functions from other classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
