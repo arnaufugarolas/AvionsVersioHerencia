@@ -151,6 +151,7 @@ public class Controller {
 
     public void DisplayAirSpace() {
         airport.Maintenance();
+        System.out.println("Situació de les aeronaus:\n");
         airport.ShowInfo();
         airport.DetectDangers();
     }
