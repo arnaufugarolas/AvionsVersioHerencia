@@ -65,4 +65,16 @@ public class Airport {
         return null;
     }
 
+    public void Maintenance() {
+
+    }
+
+    public void ShowInfo() {
+
+    }
+
+    public void DetectDangers() {
+
+    }
+
 }

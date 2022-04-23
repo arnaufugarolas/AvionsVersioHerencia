@@ -131,12 +131,28 @@ public class Controller {
         }
     }
 
+    /*
+    a.- Encendre Motor.
+    b.- Apagar Motor.
+    c.- Accelerar.
+    d.- Frenar.
+    e.- Agafar alçada.
+    f.- Baixar alçada.
+    g.- Pujar /Baixar tren aterratge.
+    h.- Establir rumb
+    i.- Posicionar X,Y
+    j.- Disparar Avió comercial sospitós
+    K.- Finalitzar operativa avio seleccionat
+     */
+
     public void ManageAircraft() {
 
     }
 
     public void DisplayAirSpace() {
-
+        airport.Maintenance();
+        airport.ShowInfo();
+        airport.DetectDangers();
     }
 
     public void Main() {
