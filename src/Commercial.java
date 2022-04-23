@@ -3,8 +3,8 @@ public class Commercial extends Aircraft {
     private String origin;
     private String destination;
 
-    public Commercial(String registration, String brand, String model, int crewMembers, int capacity, String origin, String destination) {
-        super(registration, brand, model, crewMembers);
+    public Commercial(String registration, String brand, String model, int crewMembers, int autonomy, int capacity, String origin, String destination) {
+        super(registration, brand, model, crewMembers, autonomy);
         this.capacity = capacity;
         this.origin = origin;
         this.destination = destination;

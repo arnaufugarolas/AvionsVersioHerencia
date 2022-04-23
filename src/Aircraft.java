@@ -4,13 +4,13 @@ public class Aircraft {
     private String registration, brand, model;
     private Coordinates coordinates;
 
-    public Aircraft(String registration, String brand, String model, int crewMembers) {
+    public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
         this.brand = brand;
         this.model = model;
         this.crewMembers = crewMembers;
         this.speed = 0;
-        this.autonomy = 0;
+        this.autonomy = autonomy;
         this.orientation = 0;
         this.coordinates = new Coordinates(100, 110, 0);
         this.engine = false;

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf37e2d6-ba5f-42b9-915e-e89eab58a035" name="Changes" comment="Creat">
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Missile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cf37e2d6-ba5f-42b9-915e-e89eab58a035" name="Changes" comment="El array de misiles se crea solo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aircraft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commercial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commercial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jan" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -37,25 +38,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaMethodFindUsagesOptions.isOverridingMethods": "true",
-    "JavaMethodFindUsagesOptions.isSearchForTextOccurrences": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "randomness.WordSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaMethodFindUsagesOptions.isOverridingMethods&quot;: &quot;true&quot;,
+    &quot;JavaMethodFindUsagesOptions.isSearchForTextOccurrences&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;randomness.WordSettingsConfigurable&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Controller" />
@@ -108,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650480421547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="El array de misiles se crea solo">
+      <created>1650730495562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650730495562</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update gitignore" />
     <MESSAGE value="Update .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
+    <MESSAGE value="El array de misiles se crea solo" />
+    <option name="LAST_COMMIT_MESSAGE" value="El array de misiles se crea solo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
