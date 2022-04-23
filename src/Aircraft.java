@@ -1,14 +1,8 @@
 public class Aircraft {
-    private String registration;
-    private String brand;
-    private String model;
-    private int crewMembers;
+    private int crewMembers, autonomy, orientation, speed;
+    private boolean engine, landingGear, airstrip;
+    private String registration, brand, model;
     private Coordinates coordinates;
-    private int autonomy;
-    private int orientation;
-    private int speed;
-    private boolean engine;
-    private boolean landingGear;
 
     public Aircraft(String registration, String brand, String model, int crewMembers) {
         this.registration = registration;
@@ -18,9 +12,10 @@ public class Aircraft {
         this.speed = 0;
         this.autonomy = 0;
         this.orientation = 0;
-        this.coordinates = new Coordinates(100, 100, 0);
+        this.coordinates = new Coordinates(100, 110, 0);
         this.engine = false;
         this.landingGear = true;
+        this.airstrip = true;
     }
 
     public String getRegistration() {
@@ -101,5 +96,13 @@ public class Aircraft {
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public boolean isAirstrip() {
+        return airstrip;
+    }
+
+    public void setAirstrip(boolean airstrip) {
+        this.airstrip = airstrip;
     }
 }

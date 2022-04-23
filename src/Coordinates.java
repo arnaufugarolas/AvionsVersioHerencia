@@ -1,10 +1,10 @@
 public class Coordinates {
-    private int x, y, z;
+    private int x, z, y;
 
-    public Coordinates(int x, int y, int z) {
+    public Coordinates(int x, int z, int y) {
         this.x = x;
-        this.y = y;
         this.z = z;
+        this.y = y;
     }
 
     public int getX() {

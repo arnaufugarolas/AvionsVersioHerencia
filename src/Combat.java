@@ -1,11 +1,11 @@
 public class Combat extends Aircraft {
     private Missile[] missiles;
-    private int distance;
+    private int shotDistance;
 
-    public Combat(String registration, String brand, String model, int crewMembers, Missile[] missiles, int distance) {
+    public Combat(String registration, String brand, String model, int crewMembers, Missile[] missiles, int shotDistance) {
         super(registration, brand, model, crewMembers);
         this.missiles = missiles;
-        this.distance = distance;
+        this.shotDistance = shotDistance;
     }
 
     public Missile[] getMissiles() {
@@ -16,11 +16,11 @@ public class Combat extends Aircraft {
         this.missiles = missiles;
     }
 
-    public int getDistance() {
-        return distance;
+    public int getShotDistance() {
+        return shotDistance;
     }
 
-    public void setDistance(int distance) {
-        this.distance = distance;
+    public void setShotDistance(int shotDistance) {
+        this.shotDistance = shotDistance;
     }
 }
