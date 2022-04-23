@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Airport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650738067478</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Create all display methods">
+      <created>1650738832885</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650738832885</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update .idea">
+      <created>1650738843064</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650738843064</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,13 +189,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update gitignore" />
-    <MESSAGE value="Update .idea" />
     <MESSAGE value="El array de misiles se crea solo" />
     <MESSAGE value="Created Airport.java and migrated some functions from other classes" />
     <MESSAGE value="Finish AddAircraft()" />
     <MESSAGE value="Create AircraftByRegistration method to get an aircraft by a registration" />
     <MESSAGE value=".idea update" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea update" />
+    <MESSAGE value="Create all display methods" />
+    <MESSAGE value="Update .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .idea" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
