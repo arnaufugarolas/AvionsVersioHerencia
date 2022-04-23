@@ -1,6 +1,6 @@
 public class Aircraft {
     private int crewMembers, autonomy, orientation, speed;
-    private boolean engine, landingGear, airstrip;
+    private boolean engine, landingGear;
     private String registration, brand, model;
     private Coordinates coordinates;
 
@@ -15,7 +15,6 @@ public class Aircraft {
         this.coordinates = new Coordinates(100, 110, 0);
         this.engine = false;
         this.landingGear = true;
-        this.airstrip = true;
     }
 
     public String getRegistration() {
@@ -96,13 +95,5 @@ public class Aircraft {
 
     public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    public boolean isAirstrip() {
-        return airstrip;
-    }
-
-    public void setAirstrip(boolean airstrip) {
-        this.airstrip = airstrip;
     }
 }
