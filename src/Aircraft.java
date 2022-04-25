@@ -1,4 +1,4 @@
-public class Aircraft {
+abstract public class Aircraft {
     private int crewMembers, autonomy, orientation, speed;
     private boolean engine, landingGear;
     private String registration, brand, model;
