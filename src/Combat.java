@@ -22,6 +22,7 @@ public class Combat extends Aircraft {
     }
 
     public void setShotDistance(int shotDistance) {
-        this.shotDistance = shotDistance;
+        if (shotDistance > 0) this.shotDistance = shotDistance;
+        else throw new IllegalArgumentException("La distancia de dispar ha de ser més gran de 0");
     }
 }

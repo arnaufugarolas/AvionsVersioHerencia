@@ -3,7 +3,6 @@ abstract public class Aircraft {
     private boolean engine, landingGear;
     private String registration, brand, model;
     private Coordinates coordinates;
-    static final Functions f = new Functions();
 
     public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
@@ -64,18 +63,11 @@ abstract public class Aircraft {
     }
 
     public void setAltitude(int altitude, boolean increase) {
-        if (altitude < 0) {
-            boolean stop = false;
-            while (!stop) {
-                altitude = f.nextInt("Introdueix la nova altitud", "Altitud: ");
-                if (altitude >= 0) stop = true;
-            }
-        }
-
+        if (altitude < 0) throw new IllegalArgumentException("L'altitud minima es 0");
         if (increase && altitude > this.altitude) this.altitude = altitude;
-        else if (increase) f.printInRed("L'altitud no pot ser menor o igual a l'altitud actual");
+        else if (increase) throw new IllegalArgumentException("L'altitud no pot ser menor o igual a l'altitud actual");
         else if (altitude < this.altitude) this.altitude = altitude;
-        else f.printInRed("L'altitud no pot ser major o igual a l'altitud actual");
+        else throw new IllegalArgumentException("L'altitud no pot ser major o igual a l'altitud actual");
     }
 
     public int getAutonomy() {
@@ -91,10 +83,8 @@ abstract public class Aircraft {
     }
 
     public void setOrientation(int orientation) {
-        if (orientation >= 0 && orientation <= 360) {
-            this.orientation = orientation;
-        }
-        else f.printInRed("L'orientació no pot ser menor a 0 o major a 360");
+        if (orientation >= 0 && orientation <= 360) this.orientation = orientation;
+        else throw new IllegalArgumentException("L'orientació ha d'estar entre 0º i 360º");
     }
 
     public boolean isEngine() {
@@ -102,11 +92,8 @@ abstract public class Aircraft {
     }
 
     public void setEngine(boolean engine) {
-        if (this.engine == engine) {;
-            if (engine) f.printInRed("L'avió ja esta encès");
-            else f.printInRed("L'avió ja esta apagat");
-        }
-        else this.engine = engine;
+        if (this.engine != engine) this.engine = engine;
+        else throw new IllegalArgumentException("El motor ja està " + (engine ? "encès" : "apagat"));
     }
 
     public boolean isLandingGear() {
@@ -114,7 +101,8 @@ abstract public class Aircraft {
     }
 
     public void setLandingGear(boolean landingGear) {
-        this.landingGear = landingGear;
+        if (this.landingGear != landingGear) this.landingGear = landingGear;
+        else throw new IllegalArgumentException("El tren aterratge ja està" + (landingGear ? "pujat" : "baixat"));
     }
 
     public int getSpeed() {
@@ -122,17 +110,10 @@ abstract public class Aircraft {
     }
 
     public void setSpeed(int speed, boolean increase) {
-        if (speed < 0) {
-            boolean stop = false;
-            while (!stop) {
-                speed = f.nextInt("Introdueix la nova velocitat", "Velocitat: ");
-                if (speed >= 0) stop = true;
-            }
-        }
-
+        if (speed < 0) throw new IllegalArgumentException("La velocitat minima es 0");
         if (increase && speed > this.speed) this.speed = speed;
-        else if (increase) f.printInRed("La velocitat no pot ser menor o igual a la velocitat actual");
+        else if (increase) throw new IllegalArgumentException("La velocitat no pot ser menor o igual a la velocitat actual");
         else if (speed < this.speed) this.speed = speed;
-        else f.printInRed("La velocitat no pot ser major o igual a la velocitat actual");
+        else throw new IllegalArgumentException("La velocitat no pot ser major o igual a la velocitat actual");
     }
 }
