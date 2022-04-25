@@ -69,12 +69,11 @@ public class Airport {
         for (Aircraft aircraft : airport) {
             Coordinates cords = aircraft.getCoordinates();
             if (cords.getX() > 1000 || cords.getX() < 0) airport.remove(aircraft);
-            else if (cords.getZ() > 1000 || cords.getZ() < 0) airport.remove(aircraft);
+            else if (cords.getY() > 1000 || cords.getY() < 0) airport.remove(aircraft);
         }
     }
 
     public void showInfo() {
-        //System.out.println("Situació de les aeronaus:");
         Functions f = new Functions();
         f.notImplemented();
     }

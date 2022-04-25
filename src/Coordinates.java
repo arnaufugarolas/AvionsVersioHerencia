@@ -1,9 +1,8 @@
 public class Coordinates {
-    private int x, z, y;
+    private int x, y;
 
-    public Coordinates(int x, int z, int y) {
+    public Coordinates(int x, int y) {
         this.x = x;
-        this.z = z;
         this.y = y;
     }
 
@@ -21,13 +20,5 @@ public class Coordinates {
 
     public void setY(int y) {
         this.y = y;
-    }
-
-    public int getZ() {
-        return z;
-    }
-
-    public void setZ(int z) {
-        this.z = z;
     }
 }

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aircraft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Airport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Coordinates.java" afterDir="false" />
     </list>
     <list id="bfb093d2-1395-4637-a3c7-8d63884a699b" name="Changes by Janito" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,7 @@
       <workItem from="1650470183933" duration="6601000" />
       <workItem from="1650554572893" duration="542000" />
       <workItem from="1650637018218" duration="4591000" />
-      <workItem from="1650905203878" duration="7841000" />
+      <workItem from="1650905203878" duration="8297000" />
     </task>
     <task id="LOCAL-00001" summary="Update gitignore">
       <created>1650480317184</created>
@@ -228,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650905426747</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Naming fixes">
+      <created>1650913122723</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1650913122723</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +263,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value=".idea update" />
     <MESSAGE value="Make Aircraft.java abstract" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Aircraft.java abstract" />
+    <MESSAGE value="Naming fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Naming fixes" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

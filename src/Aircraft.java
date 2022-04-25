@@ -1,5 +1,5 @@
 abstract public class Aircraft {
-    private int crewMembers, autonomy, orientation, speed;
+    private int crewMembers, autonomy, orientation, speed, altitude;
     private boolean engine, landingGear;
     private String registration, brand, model;
     private Coordinates coordinates;
@@ -13,7 +13,8 @@ abstract public class Aircraft {
         this.speed = 0;
         this.autonomy = autonomy;
         this.orientation = 0;
-        this.coordinates = new Coordinates(100, 110, 0);
+        this.coordinates = new Coordinates(100, 110);
+        this.altitude = 0;
         this.engine = false;
         this.landingGear = true;
     }
@@ -56,6 +57,14 @@ abstract public class Aircraft {
 
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
+    }
+
+    public int getAltitude() {
+        return altitude;
+    }
+
+    public void setAltitude(int altitude) {
+        this.altitude = altitude;
     }
 
     public int getAutonomy() {

@@ -129,6 +129,7 @@ public class Controller {
                     i.- Posicionar X,Z
                     j.- Disparar Avió comercial sospitós
                     K.- Finalitzar operativa avio seleccionat""", "Opció: ").charAt(0);
+
             switch (letter) {
                 case 'a' -> aircraft.setEngine(true);
                 case 'b' -> aircraft.setEngine(false);
