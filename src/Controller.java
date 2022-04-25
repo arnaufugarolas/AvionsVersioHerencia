@@ -128,15 +128,15 @@ public class Controller {
                     h.- Establir rumb
                     i.- Posicionar X,Z
                     j.- Disparar Avió comercial sospitós
-                    K.- Finalitzar operativa avio seleccionat""", "Opció: ").charAt(0);
+                    K.- Finalitzar operativa avio seleccionat""", "Opció: ").toLowerCase().charAt(0);
 
             switch (letter) {
                 case 'a' -> aircraft.setEngine(true);
                 case 'b' -> aircraft.setEngine(false);
                 case 'c' -> aircraft.setSpeed(-1, true);
                 case 'd' -> aircraft.setSpeed(-1, false);
-                case 'e' -> f.notImplemented();
-                case 'f' -> f.notImplemented();
+                case 'e' -> aircraft.setAltitude(-1, true);
+                case 'f' -> aircraft.setAltitude(-1, false);
                 case 'g' -> aircraft.setLandingGear(!aircraft.isLandingGear());
                 case 'h' -> f.notImplemented();
                 case 'i' -> f.notImplemented();

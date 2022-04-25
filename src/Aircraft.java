@@ -63,8 +63,19 @@ abstract public class Aircraft {
         return altitude;
     }
 
-    public void setAltitude(int altitude) {
-        this.altitude = altitude;
+    public void setAltitude(int altitude, boolean increase) {
+        if (altitude < 0) {
+            boolean stop = false;
+            while (!stop) {
+                altitude = f.nextInt("Introdueix la nova altitud", "Altitud: ");
+                if (altitude >= 0) stop = true;
+            }
+        }
+
+        if (increase && altitude > this.altitude) this.altitude = altitude;
+        else if (increase) f.printInRed("L'altitud no pot ser menor o igual a l'altitud actual");
+        else if (altitude < this.altitude) this.altitude = altitude;
+        else f.printInRed("L'altitud no pot ser major o igual a l'altitud actual");
     }
 
     public int getAutonomy() {
@@ -80,7 +91,10 @@ abstract public class Aircraft {
     }
 
     public void setOrientation(int orientation) {
-        this.orientation = orientation;
+        if (orientation >= 0 && orientation <= 360) {
+            this.orientation = orientation;
+        }
+        else f.printInRed("L'orientació no pot ser menor a 0 o major a 360");
     }
 
     public boolean isEngine() {
