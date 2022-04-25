@@ -3,6 +3,7 @@ abstract public class Aircraft {
     private boolean engine, landingGear;
     private String registration, brand, model;
     private Coordinates coordinates;
+    static final Functions f = new Functions();
 
     public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
@@ -78,7 +79,11 @@ abstract public class Aircraft {
     }
 
     public void setEngine(boolean engine) {
-        this.engine = engine;
+        if (this.engine == engine) {;
+            if (engine) f.printInRed("L'avió ja esta encès");
+            else f.printInRed("L'avió ja esta apagat");
+        }
+        else this.engine = engine;
     }
 
     public boolean isLandingGear() {
@@ -93,7 +98,18 @@ abstract public class Aircraft {
         return speed;
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    public void setSpeed(int speed, boolean increase) {
+        if (speed < 0) {
+            boolean stop = false;
+            while (!stop) {
+                speed = f.nextInt("Introdueix la nova velocitat", "Velocitat: ");
+                if (speed >= 0) stop = true;
+            }
+        }
+
+        if (increase && speed > this.speed) this.speed = speed;
+        else if (increase) f.printInRed("La velocitat no pot ser menor o igual a la velocitat actual");
+        else if (speed < this.speed) this.speed = speed;
+        else f.printInRed("La velocitat no pot ser major o igual a la velocitat actual");
     }
 }

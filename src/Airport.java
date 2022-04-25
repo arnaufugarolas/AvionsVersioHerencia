@@ -40,7 +40,7 @@ public class Airport {
         this.maximumAircraft = maximumAircraft;
     }
 
-    public boolean FreeRegistration(String registration) {
+    public boolean freeRegistration(String registration) {
         for (Aircraft aircraft : airport) {
             if (aircraft.getRegistration().equals(registration)) return false;
         }
@@ -58,14 +58,14 @@ public class Airport {
         else throw new RuntimeException("La pista no està lliure");
     }
 
-    public Aircraft AircraftByRegistration(String registration) {
+    public Aircraft aircraftByRegistration(String registration) {
         for (Aircraft aircraft : airport) {
             if (aircraft.getRegistration().equals(registration)) return aircraft;
         }
         return null;
     }
 
-    public void Maintenance() {
+    public void maintenance() {
         for (Aircraft aircraft : airport) {
             Coordinates cords = aircraft.getCoordinates();
             if (cords.getX() > 1000 || cords.getX() < 0) airport.remove(aircraft);
@@ -73,12 +73,15 @@ public class Airport {
         }
     }
 
-    public void ShowInfo() {
-
+    public void showInfo() {
+        //System.out.println("Situació de les aeronaus:");
+        Functions f = new Functions();
+        f.notImplemented();
     }
 
-    public void DetectDangers() {
-
+    public void detectDangers() {
+        Functions f = new Functions();
+        f.notImplemented();
     }
 
 }
