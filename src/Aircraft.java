@@ -18,6 +18,20 @@ abstract public class Aircraft {
         this.landingGear = true;
     }
 
+    public Aircraft(Aircraft aircraft) {
+        this.registration = aircraft.getRegistration();
+        this.brand = aircraft.getBrand();
+        this.model = aircraft.getModel();
+        this.crewMembers = aircraft.getCrewMembers();
+        this.speed = aircraft.getSpeed();
+        this.autonomy = aircraft.getAutonomy();
+        this.orientation = aircraft.getOrientation();
+        this.coordinates = new Coordinates(aircraft.getCoordinates().getX(), aircraft.getCoordinates().getY());
+        this.altitude = aircraft.getAltitude();
+        this.engine = aircraft.isEngine();
+        this.landingGear = aircraft.isLandingGear();
+    }
+
     public String getRegistration() {
         return registration;
     }

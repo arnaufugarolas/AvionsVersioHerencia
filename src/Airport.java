@@ -51,6 +51,8 @@ public class Airport {
         if (freeAirstrip) {
             if (numberAircraft < maximumAircraft) {
                 airport.add(aircraft);
+                numberAircraft++;
+                freeAirstrip = false;
             }
             else throw new RuntimeException("S'ha arribat al màxim d'avions a gestionar (" + maximumAircraft + ")");
 

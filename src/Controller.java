@@ -106,7 +106,7 @@ public class Controller {
     }
 
     public void manageAircraft() {
-        String registration = f.nextString("Introdueix la matrícula del avió a gestionar", "Matrícula: ");
+        String registration = f.nextString("Introdueix la matrícula de l'avió a gestionar", "Matrícula: ");
 
         if (airport.freeRegistration(registration)) {
             f.printInRed("L'avio no existeix");
@@ -114,7 +114,7 @@ public class Controller {
         }
 
         Aircraft aircraft = airport.aircraftByRegistration(registration);
-
+        Combat aircraftCopy = new Combat((Combat) aircraft);
         boolean stop = false;
         while (!stop) {
             char letter = f.nextString("""
@@ -138,7 +138,7 @@ public class Controller {
                 case 'e' -> aircraft.setAltitude(-1, true);
                 case 'f' -> aircraft.setAltitude(-1, false);
                 case 'g' -> aircraft.setLandingGear(!aircraft.isLandingGear());
-                case 'h' -> f.notImplemented();
+                case 'h' -> aircraft.setOrientation(-1);
                 case 'i' -> f.notImplemented();
                 case 'j' -> f.notImplemented();
                 case 'k' -> stop = true;
@@ -156,7 +156,6 @@ public class Controller {
     public void principal() {
         boolean stop = false;
         airport.addAircraft(new Combat("registration", "brand", "model", 0, 0, 10, 0));
-        airport.addAircraft(new Commercial("registration2", "brand", "model", 0, 0, 10, "origin", "destination"));
 
         while (!stop) {
             int number = f.nextInt("\nControlador aeri\n1- Afegir un avió a l’espai aeri.\n2- Gestionar un avió de l’espai Aeri.\n3- Mostrar L’espai Aeri actual.\n4- Sortir", "Opció: ");

@@ -10,6 +10,20 @@ public class Commercial extends Aircraft {
         this.destination = destination;
     }
 
+    public Commercial(Commercial commercial) {
+        super(commercial);
+        this.capacity = commercial.getCapacity();
+        this.origin = commercial.getOrigin();
+        this.destination = commercial.getDestination();
+    }
+
+    public Commercial() {
+        super("", "", "", 0, 0);
+        this.capacity = 0;
+        this.origin = "";
+        this.destination = "";
+    }
+
     public int getCapacity() {
         return capacity;
     }
