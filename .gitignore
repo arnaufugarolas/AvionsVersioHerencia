@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 oopTable.ini
+/shelf/
 .idea/workspace.xml
 
 ### Eclipse ###
@@ -29,3 +30,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/shelf/
