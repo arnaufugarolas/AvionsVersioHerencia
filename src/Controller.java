@@ -1,10 +1,9 @@
 public class Controller {
     static final int maximumAircraft = 10;
-    static final Controller c = new Controller();
     static final Functions f = new Functions();
     static final Airport airport = new Airport(maximumAircraft);
 
-    public void addAircraft() {
+    public static void addAircraft() {
         String registration = null;
         String destination = null;
         int type = 0;
@@ -105,7 +104,7 @@ public class Controller {
         }
     }
 
-    public void manageAircraft() {
+    public static void manageAircraft() {
         String registration = f.nextString("Introdueix la matrícula de l'avió a gestionar", "Matrícula: ");
 
         if (airport.freeRegistration(registration)) {
@@ -114,7 +113,7 @@ public class Controller {
         }
 
         Aircraft aircraft = airport.aircraftByRegistration(registration);
-        Combat aircraftCopy = new Combat((Combat) aircraft);
+
         boolean stop = false;
         while (!stop) {
             char letter = f.nextString("""
@@ -147,13 +146,13 @@ public class Controller {
         }
     }
 
-    public void displayAirSpace() {
+    public static void displayAirSpace() {
         airport.maintenance();
         airport.showInfo();
         airport.detectDangers();
     }
 
-    public void principal() {
+    public static void principal() {
         boolean stop = false;
         airport.addAircraft(new Combat("registration", "brand", "model", 0, 0, 10, 0));
 
@@ -161,14 +160,14 @@ public class Controller {
             int number = f.nextInt("\nControlador aeri\n1- Afegir un avió a l’espai aeri.\n2- Gestionar un avió de l’espai Aeri.\n3- Mostrar L’espai Aeri actual.\n4- Sortir", "Opció: ");
             switch (number) {
                 case 1 -> addAircraft();
-                case 2 -> c.manageAircraft();
-                case 3 -> c.displayAirSpace();
+                case 2 -> manageAircraft();
+                case 3 -> displayAirSpace();
                 default -> stop = true;
             }
         }
     }
 
     public static void main(String[] args) {
-        c.principal();
+        principal();
     }
 }
