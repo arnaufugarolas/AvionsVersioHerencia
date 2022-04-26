@@ -16,6 +16,13 @@ public class Combat extends Aircraft {
         for (int i = 0; i < this.missiles.length; i++) this.missiles[i] = new Missile();
     }
 
+    public Combat() {
+        super("", "", "", 0, 0);
+        this.missiles = new Missile[0];
+        this.shotDistance = 0;
+    }
+
+
     public Missile[] getMissiles() {
         return missiles;
     }

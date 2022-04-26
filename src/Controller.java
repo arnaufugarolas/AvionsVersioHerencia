@@ -160,7 +160,7 @@ public class Controller {
         while (!stop) {
             int number = f.nextInt("\nControlador aeri\n1- Afegir un avió a l’espai aeri.\n2- Gestionar un avió de l’espai Aeri.\n3- Mostrar L’espai Aeri actual.\n4- Sortir", "Opció: ");
             switch (number) {
-                case 1 -> c.addAircraft();
+                case 1 -> addAircraft();
                 case 2 -> c.manageAircraft();
                 case 3 -> c.displayAirSpace();
                 default -> stop = true;

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e385c969-9af7-4651-b6b1-489664cec652" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2022_18_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_04_2022_18_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2022_17_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2022_17_04__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2022_18_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_04_2022_18_47__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aircraft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Airport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commercial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commercial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Missile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Missile.java" afterDir="false" />
     </list>
     <list id="bfb093d2-1395-4637-a3c7-8d63884a699b" name="Changes by Janito" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +109,6 @@
       <workItem from="1650637018218" duration="4591000" />
       <workItem from="1650905203878" duration="8297000" />
       <workItem from="1650918506959" duration="3340000" />
-      <workItem from="1650967155879" duration="5309000" />
     </task>
     <task id="LOCAL-00001" summary="Update gitignore">
       <created>1650480317184</created>
@@ -282,21 +277,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Create some functions" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Combat" memberName="missiles" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="Controller.airport.airport.get(0)" />
         <watch expression="Controller.airport.airport.get(0)" />
-        <watch expression="aircraftCopy" />
-        <watch expression="((Combat)aircraft).coordinates" custom="Combat" />
       </configuration>
     </watches-manager>
   </component>
