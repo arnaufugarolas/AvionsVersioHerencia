@@ -13,10 +13,17 @@ public class Functions {
     }
 
     public int nextInt(String msg, String question) {
-        int intInput = 0;
-        boolean correct = false;
         System.out.printf("%s\n%s", msg, question);
+        return checkInt(question);
+    }
 
+    public int nextInt(String msg) {
+        System.out.print(msg);
+        return checkInt(msg);
+    }
+
+    private int checkInt(String msg) {
+        int intInput = 0; boolean correct = false;
         while (!correct) {
             if (input.hasNextInt()){
                 intInput = input.nextInt();
@@ -25,12 +32,13 @@ public class Functions {
             else {
                 input.nextLine();
                 f.printInRed("Introdueix un número");
-                System.out.print(question);
+                System.out.print(msg);
             }
         }
 
         return intInput;
     }
+
 
     public String nextString(String msg, String question) {
         System.out.printf("%s\n%s", msg, question);

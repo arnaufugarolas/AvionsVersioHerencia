@@ -3,6 +3,7 @@ abstract public class Aircraft {
     private boolean engine, landingGear;
     private String registration, brand, model;
     private Coordinates coordinates;
+    private Functions f = new Functions();
 
     public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
@@ -62,13 +63,21 @@ abstract public class Aircraft {
         return altitude;
     }
 
-    public void setAltitude(int altitude, boolean increase) {
+    public void setAltitude(int altitude) {
+        this.altitude = altitude;
+    }
+
+    public void setAltitude(boolean increase) {
+        int altitude = f.nextInt();
+
+
         if (altitude < 0) throw new IllegalArgumentException("L'altitud minima es 0");
         if (increase && altitude > this.altitude) this.altitude = altitude;
         else if (increase) throw new IllegalArgumentException("L'altitud no pot ser menor o igual a l'altitud actual");
         else if (altitude < this.altitude) this.altitude = altitude;
         else throw new IllegalArgumentException("L'altitud no pot ser major o igual a l'altitud actual");
     }
+
 
     public int getAutonomy() {
         return autonomy;
