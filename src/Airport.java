@@ -5,14 +5,15 @@ public class Airport {
     private boolean freeAirstrip;
     private int numberAircraft;
     private int maximumAircraft;
-    public ArrayList<Aircraft> getAirport() {
-        return airport;
-    }
 
     public Airport(int maximumAircraft) {
         this.freeAirstrip = true;
         numberAircraft = 0;
         this.maximumAircraft = maximumAircraft;
+    }
+
+    public ArrayList<Aircraft> getAirport() {
+        return airport;
     }
 
     public boolean isFreeAirstrip() {
