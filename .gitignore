@@ -4,7 +4,9 @@ out/
 !**/src/test/**/out/
 oopTable.ini
 /shelf/
+/shelf/**/
 .idea/workspace.xml
+workspace.xml
 
 ### Eclipse ###
 .apt_generated
