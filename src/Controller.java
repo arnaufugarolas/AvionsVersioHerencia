@@ -67,29 +67,30 @@ public class Controller {
         boolean stop = false;
         while (!stop) {
             char letter = f.nextString("""
-                    a.- Encendre Motor.
-                    b.- Apagar Motor.
-                    c.- Accelerar.
-                    d.- Frenar.
-                    e.- Agafar alçada.
-                    f.- Baixar alçada.
-                    g.- Pujar /Baixar tren aterratge.
-                    h.- Establir rumb
-                    i.- Posicionar X,Z
-                    j.- Disparar Avió comercial sospitós
-                    K.- Finalitzar operativa avio seleccionat""", "Opció: ").toLowerCase().charAt(0);
+                    A.- Encendre Motor
+                    B.- Apagar Motor
+                    C.- Accelerar
+                    D.- Frenar
+                    E.- Agafar alçada
+                    F.- Baixar alçada
+                    G.- Pujar / Baixar tren aterratge
+                    H.- Establir rumb
+                    I.- Posicionar X i Z
+                    J.- Disparar Avió comercial sospitós
+                    K.- Finalitzar operativa avio seleccionat""", "Opció: ").toUpperCase().charAt(0);
 
             switch (letter) {
-                case 'a' -> aircraft.setEngine(true);
-                case 'b' -> aircraft.setEngine(false);
-                case 'c' -> aircraft.setSpeed(-1, true);
-                case 'd' -> aircraft.setSpeed(-1, false);
-                case 'e' -> aircraft.setAltitude(true);
-                case 'f' -> aircraft.setAltitude(false);
-                case 'g' -> aircraft.setLandingGear(!aircraft.isLandingGear());
-                case 'h' -> aircraft.setOrientation(-1);
-                case 'i', 'j' -> f.notImplemented();
-                case 'k' -> stop = true;
+                case 'A' -> aircraft.setEngine(true);
+                case 'B' -> aircraft.setEngine(false);
+                case 'C' -> aircraft.setSpeed(true);
+                case 'D' -> aircraft.setSpeed(false);
+                case 'E' -> aircraft.setAltitude(true);
+                case 'F' -> aircraft.setAltitude(false);
+                case 'G' -> aircraft.setLandingGear(!aircraft.isLandingGear());
+                case 'H' -> aircraft.setOrientation();
+                case 'I' -> aircraft.setCoordinates();
+                case 'J' -> f.notImplemented();
+                case 'K' -> stop = true;
                 default -> f.printInRed("Introdueix una lletra correcta");
             }
         }

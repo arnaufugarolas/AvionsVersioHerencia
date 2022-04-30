@@ -10,7 +10,7 @@ public class Missile {
     }
 
     public void setUsed(boolean used) {
-        if (this.used == used) throw new IllegalArgumentException("El míssil ja esta " + (used ? "usat" : "no usat"));
+        if (this.used) throw new IllegalArgumentException("El míssil ja està " + (used ? "usat" : "no usat"));
         else this.used = used;
     }
 }

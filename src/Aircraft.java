@@ -1,9 +1,10 @@
 abstract public class Aircraft {
-    private int crewMembers, autonomy, orientation, speed, altitude;
+    private final Functions f = new Functions();
+    private final int crewMembers, autonomy;
+    private final String registration, brand, model;
+    private int orientation, speed, altitude;
     private boolean engine, landingGear;
-    private String registration, brand, model;
     private Coordinates coordinates;
-    private Functions f = new Functions();
 
     public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
@@ -19,94 +20,50 @@ abstract public class Aircraft {
         this.landingGear = true;
     }
 
-    public String getRegistration() {
-        return registration;
+    public String getRegistration() { return registration; }
+
+    public String getBrand() { return brand; }
+
+    public String getModel() { return model; }
+
+    public int getCrewMembers() { return crewMembers; }
+
+    public Coordinates getCoordinates() { return coordinates; }
+
+    public int getAltitude() { return altitude; }
+
+    public int getAutonomy() { return autonomy; }
+
+    public int getOrientation() { return orientation; }
+
+    public void setCoordinates(Coordinates coordinates) { this.coordinates = coordinates; }
+
+    public boolean isEngine() { return engine; }
+
+    public int getSpeed() { return speed; }
+
+    public boolean isLandingGear() { return landingGear; }
+
+    public void setCoordinates() {
+        int x = f.nextInt("Introdueix la coordenada X: ", "X: ");
+        int y = f.nextInt("Introdueix la coordenada Y: ", "Y: ");
+        this.coordinates = new Coordinates(x, y);
     }
 
-    public void setRegistration(String registration) {
-        this.registration = registration;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getCrewMembers() {
-        return crewMembers;
-    }
-
-    public void setCrewMembers(int crewMembers) {
-        this.crewMembers = crewMembers;
-    }
-
-    public Coordinates getCoordinates() {
-        return coordinates;
-    }
-
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    public int getAltitude() {
-        return altitude;
-    }
-
-    public void setAltitude(int altitude) {
-        this.altitude = altitude;
-    }
+    public void setAltitude(int altitude) { this.altitude = altitude; }
 
     public void setAltitude(boolean increase) {
-        int altitude = f.nextInt("Altitud: ", 0, 10000);
-
-
-        if (altitude < 0) throw new IllegalArgumentException("L'altitud minima es 0");
-        if (increase && altitude > this.altitude) this.altitude = altitude;
-        else if (increase) throw new IllegalArgumentException("L'altitud no pot ser menor o igual a l'altitud actual");
-        else if (altitude < this.altitude) this.altitude = altitude;
-        else throw new IllegalArgumentException("L'altitud no pot ser major o igual a l'altitud actual");
+        if (increase) this.altitude = f.nextInt("Altitud: ", this.altitude + 1, Integer.MAX_VALUE);
+        else this.altitude = f.nextInt("Altitud: ", 0, this.altitude - 1);
     }
 
+    public void setOrientation(int orientation) { this.orientation = orientation; }
 
-    public int getAutonomy() {
-        return autonomy;
-    }
-
-    public void setAutonomy(int autonomy) {
-        this.autonomy = autonomy;
-    }
-
-    public int getOrientation() {
-        return orientation;
-    }
-
-    public void setOrientation(int orientation) {
-        if (orientation >= 0 && orientation <= 360) this.orientation = orientation;
-        else throw new IllegalArgumentException("L'orientació ha d'estar entre 0º i 360º");
-    }
-
-    public boolean isEngine() {
-        return engine;
-    }
+    public void setOrientation() { this.orientation = f.nextInt("Introdueix el rumb de l'avió", "Rumb: ", 0, 360); }
 
     public void setEngine(boolean engine) {
         if (this.engine != engine) this.engine = engine;
         else throw new IllegalArgumentException("El motor ja està " + (engine ? "encès" : "apagat"));
-    }
-
-    public boolean isLandingGear() {
-        return landingGear;
     }
 
     public void setLandingGear(boolean landingGear) {
@@ -114,15 +71,10 @@ abstract public class Aircraft {
         else throw new IllegalArgumentException("El tren aterratge ja està" + (landingGear ? "pujat" : "baixat"));
     }
 
-    public int getSpeed() {
-        return speed;
-    }
+    public void setSpeed(int speed) { this.speed = speed; }
 
-    public void setSpeed(int speed, boolean increase) {
-        if (speed < 0) throw new IllegalArgumentException("La velocitat minima es 0");
-        if (increase && speed > this.speed) this.speed = speed;
-        else if (increase) throw new IllegalArgumentException("La velocitat no pot ser menor o igual a la velocitat actual");
-        else if (speed < this.speed) this.speed = speed;
-        else throw new IllegalArgumentException("La velocitat no pot ser major o igual a la velocitat actual");
+    public void setSpeed(boolean increase) {
+        if (increase) this.speed = f.nextInt("Velocitat: ", this.speed + 1, Integer.MAX_VALUE);
+        else this.speed = f.nextInt("Velocitat: ", 0, this.speed - 1);
     }
 }

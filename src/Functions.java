@@ -38,7 +38,7 @@ public class Functions {
             if (input.hasNextInt()){
                 intInput = input.nextInt();
                 if (intInput >= min && intInput <= max) correct = true;
-                else System.out.printf("%s\n%s", msg, "Introdueix un número entre " + min + " i " + max);
+                else printInRed(msg + "\nIntrodueix un número entre " + min + " i " + max);
             }
             else {
                 input.nextLine();
