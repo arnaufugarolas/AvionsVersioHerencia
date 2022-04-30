@@ -68,7 +68,7 @@ abstract public class Aircraft {
     }
 
     public void setAltitude(boolean increase) {
-        int altitude = f.nextInt();
+        int altitude = f.nextInt("Altitud: ", 0, 10000);
 
 
         if (altitude < 0) throw new IllegalArgumentException("L'altitud minima es 0");
