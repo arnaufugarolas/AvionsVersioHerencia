@@ -105,6 +105,7 @@ public class Controller {
     public static void principal() {
         boolean stop = false;
         airport.addAircraft(new Combat("registration", "brand", "model", 0, 0, 10, 0));
+        airport.addAircraft(new Commercial("registration2", "brand", "model", 0, 0, 10, "origin", "destination"));
 
         while (!stop) {
             int number = f.nextInt("\nControlador aeri\n1- Afegir un avió a l’espai aeri.\n2- Gestionar un avió de l’espai Aeri.\n3- Mostrar L’espai Aeri actual.\n4- Sortir", "Opció: ", 1, 4);

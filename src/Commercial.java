@@ -12,7 +12,14 @@ public class Commercial extends Aircraft {
     }
 
     // Getters
-    public int getCapacity() { return capacity; }
-    public String getOrigin() { return origin; }
-    public String getDestination() { return destination; }
+    public int getCapacity() { return this.capacity; }
+    public String getOrigin() { return this.origin; }
+    public String getDestination() { return this.destination; }
+
+    // Methods
+    public void showInfo() {
+        super.showInfo();
+        System.out.println("Origen: " + this.origin);
+        System.out.println("Destinació: " + this.destination);
+    }
 }

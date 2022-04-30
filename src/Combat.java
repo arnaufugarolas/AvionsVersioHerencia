@@ -14,6 +14,19 @@ public class Combat extends Aircraft {
     }
 
     // Getters
-    public Missile[] getMissiles() { return missiles; }
-    public int getShotDistance() { return shotDistance; }
+    public Missile[] getMissiles() {
+        return missiles;
+    }
+
+    public int getShotDistance() {
+        return shotDistance;
+    }
+
+    // Methods
+    public void showInfo() {
+        super.showInfo();
+        System.out.print("Misils: ");
+        for (Missile missile : this.missiles) { System.out.print((missile.isUsed() ? "usat " : "disponible ")); }
+        System.out.println();
+    }
 }

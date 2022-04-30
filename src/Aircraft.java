@@ -60,7 +60,7 @@ abstract public class Aircraft {
 
     public void setLandingGear(boolean landingGear) {
         if (this.landingGear != landingGear) this.landingGear = landingGear;
-        else f.printInRed("El tren d'aterratge ja està" + (landingGear ? "pujat" : "baixat"));
+        else f.printInRed("El tren d'aterratge ja està" + (landingGear ? "baixat" : "pujat"));
     }
 
     public void setSpeed(int speed) { this.speed = speed; }
@@ -68,4 +68,18 @@ abstract public class Aircraft {
         if (increase) this.speed = f.nextInt("Velocitat: ", this.speed + 1, Integer.MAX_VALUE);
         else this.speed = f.nextInt("Velocitat: ", 0, this.speed - 1);
     }
+
+    // Methods
+    public void showInfo() {
+        System.out.println("Matrícula: " + this.registration);
+        System.out.println("Marca: " + this.brand);
+        System.out.println("Model: " + this.model);
+        System.out.println("X: " + this.coordinates.getX());
+        System.out.println("Y: " + this.coordinates.getX());
+        System.out.println("Alçada: " + this.altitude);
+        System.out.println("Velocitat: " + this.speed);
+        System.out.println("Tren aterratge: " + (this.landingGear ? "On" : "Off"));
+        System.out.println("Motor: " + (this.engine ? "On" : "Off"));
+    }
+
 }

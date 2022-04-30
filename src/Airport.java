@@ -46,7 +46,7 @@ public class Airport {
             if (this.numberAircraft < this.maximumAircraft) {
                 airport.add(aircraft);
                 numberAircraft++;
-                freeAirstrip = false;
+                freeAirstrip = true;
             }
             else f.printInRed("S'ha arribat al màxim d'avions a gestionar (" + this.maximumAircraft + ")");
         }
@@ -62,11 +62,40 @@ public class Airport {
     }
 
     public void showInfo() {
-        f.notImplemented();
+        System.out.println("\nSituació de les aeronaus: \n");
+        for (Aircraft aircraft : this.airport) {
+            System.out.println("Aeronau " + (airport.indexOf(aircraft) + 1));
+            aircraft.showInfo();
+            System.out.println();
+        }
     }
 
     public void detectDangers() {
-        f.notImplemented();
+
+        ArrayList<Danger> dangers = new ArrayList<>();
+        for (Aircraft aircraftA : this.airport) {
+            for (Aircraft aircraftB : this.airport) {
+                if (aircraftA == aircraftB) continue;
+                Coordinates cords1 = aircraftA.getCoordinates();
+                Coordinates cords2 = aircraftB.getCoordinates();
+                if (Math.abs(aircraftA.getAltitude() - aircraftB.getAltitude()) < 500) {
+                    if (Math.abs(cords1.x() - cords2.x()) < 50 && Math.abs(cords1.y() - cords2.y()) < 50) {
+                        if (dangers.size() == 0) {
+                            f.printInRed("\nHi ha un perill entre les aeronaus " + (airport.indexOf(aircraftA) + 1) + " i " + (airport.indexOf(aircraftB) + 1) + "!");
+                            dangers.add(new Danger(aircraftA.getRegistration(), aircraftB.getRegistration()));
+                        }
+                        else {
+                            for (Danger danger : dangers) {
+                                if (!danger.getAircraftA().equals(aircraftB.getRegistration()) && !danger.getAircraftB().equals(aircraftA.getRegistration())) {
+                                    f.printInRed("\nHi ha un perill entre les aeronaus " + (airport.indexOf(aircraftA) + 1) + " i " + (airport.indexOf(aircraftB) + 1) + "!");
+                                    dangers.add(new Danger(aircraftA.getRegistration(), aircraftB.getRegistration()));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
