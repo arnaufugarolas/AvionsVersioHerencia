@@ -1,11 +1,14 @@
 abstract public class Aircraft {
-    private final Functions f = new Functions();
+    final Functions f = new Functions();
+
+    // Attributes
     private final int crewMembers, autonomy;
     private final String registration, brand, model;
     private int orientation, speed, altitude;
     private boolean engine, landingGear;
     private Coordinates coordinates;
 
+    // Constructor
     public Aircraft(String registration, String brand, String model, int crewMembers, int autonomy) {
         this.registration = registration;
         this.brand = brand;
@@ -52,12 +55,12 @@ abstract public class Aircraft {
 
     public void setEngine(boolean engine) {
         if (this.engine != engine) this.engine = engine;
-        else throw new IllegalArgumentException("El motor ja està " + (engine ? "encès" : "apagat"));
+        else f.printInRed("El motor ja està " + (engine ? "encès" : "apagat"));
     }
 
     public void setLandingGear(boolean landingGear) {
         if (this.landingGear != landingGear) this.landingGear = landingGear;
-        else throw new IllegalArgumentException("El tren aterratge ja està" + (landingGear ? "pujat" : "baixat"));
+        else f.printInRed("El tren d'aterratge ja està" + (landingGear ? "pujat" : "baixat"));
     }
 
     public void setSpeed(int speed) { this.speed = speed; }

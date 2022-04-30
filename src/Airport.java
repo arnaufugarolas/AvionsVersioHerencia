@@ -1,87 +1,71 @@
 import java.util.ArrayList;
 
 public class Airport {
+    final Functions f = new Functions();
+
+    // Attributes
     private final ArrayList<Aircraft> airport = new ArrayList<>();
+    private final int maximumAircraft;
     private boolean freeAirstrip;
     private int numberAircraft;
-    private int maximumAircraft;
 
+    // Constructor
     public Airport(int maximumAircraft) {
         this.freeAirstrip = true;
-        numberAircraft = 0;
+        this.numberAircraft = 0;
         this.maximumAircraft = maximumAircraft;
     }
 
-    public ArrayList<Aircraft> getAirport() {
-        return airport;
-    }
+    // Getters
+    public ArrayList<Aircraft> getAirport() { return this.airport; }
+    public int getNumberAircraft() { return this.numberAircraft; }
+    public int getMaximumAircraft() { return this.maximumAircraft; }
 
-    public boolean isFreeAirstrip() {
-        return freeAirstrip;
-    }
+    // Setters
+    public void setFreeAirstrip(boolean freeAirstrip) { this.freeAirstrip = freeAirstrip; }
+    public void setNumberAircraft(int numberAircraft) { this.numberAircraft = numberAircraft; }
+    public boolean isFreeAirstrip() { return this.freeAirstrip;}
 
-    public void setFreeAirstrip(boolean freeAirstrip) {
-        this.freeAirstrip = freeAirstrip;
-    }
-
-    public int getNumberAircraft() {
-        return numberAircraft;
-    }
-
-    public void setNumberAircraft(int numberAircraft) {
-        this.numberAircraft = numberAircraft;
-    }
-
-    public int getMaximumAircraft() {
-        return maximumAircraft;
-    }
-
-    public void setMaximumAircraft(int maximumAircraft) {
-        this.maximumAircraft = maximumAircraft;
-    }
-
+    // Methods
     public boolean freeRegistration(String registration) {
-        for (Aircraft aircraft : airport) {
+        for (Aircraft aircraft : this.airport) {
             if (aircraft.getRegistration().equals(registration)) return false;
         }
         return true;
     }
 
-    public void addAircraft(Aircraft aircraft) {
-        if (freeAirstrip) {
-            if (numberAircraft < maximumAircraft) {
-                airport.add(aircraft);
-                numberAircraft++;
-                freeAirstrip = false;
-            }
-            else throw new RuntimeException("S'ha arribat al màxim d'avions a gestionar (" + maximumAircraft + ")");
-
-        }
-        else throw new RuntimeException("La pista no està lliure");
-    }
-
     public Aircraft aircraftByRegistration(String registration) {
-        for (Aircraft aircraft : airport) {
+        for (Aircraft aircraft : this.airport) {
             if (aircraft.getRegistration().equals(registration)) return aircraft;
         }
         return null;
     }
 
+    public void addAircraft(Aircraft aircraft) {
+        if (this.freeAirstrip) {
+            if (this.numberAircraft < this.maximumAircraft) {
+                airport.add(aircraft);
+                numberAircraft++;
+                freeAirstrip = false;
+            }
+            else f.printInRed("S'ha arribat al màxim d'avions a gestionar (" + this.maximumAircraft + ")");
+        }
+        else f.printInRed("La pista no està lliure");
+    }
+
     public void maintenance() {
-        for (Aircraft aircraft : airport) {
+        for (Aircraft aircraft : this.airport) {
             Coordinates cords = aircraft.getCoordinates();
-            if (cords.getX() > 1000 || cords.getX() < 0) airport.remove(aircraft);
-            else if (cords.getY() > 1000 || cords.getY() < 0) airport.remove(aircraft);
+            if (cords.x() > 1000 || cords.x() < 0) this.airport.remove(aircraft);
+            else if (cords.y() > 1000 || cords.y() < 0) this.airport.remove(aircraft);
         }
     }
 
     public void showInfo() {
-        Functions f = new Functions();
         f.notImplemented();
     }
 
     public void detectDangers() {
-        Functions f = new Functions();
         f.notImplemented();
     }
 

@@ -1,7 +1,11 @@
 public class Combat extends Aircraft {
-    private Missile[] missiles;
-    private int shotDistance;
+    final Functions f = new Functions();
 
+    // Attributes
+    private final Missile[] missiles;
+    private final int shotDistance;
+
+    // Constructor
     public Combat(String registration, String brand, String model, int crewMembers, int autonomy, int numberMissiles, int shotDistance) {
         super(registration, brand, model, crewMembers, autonomy);
         this.shotDistance = shotDistance;
@@ -9,20 +13,7 @@ public class Combat extends Aircraft {
         for (int i = 0; i < numberMissiles; i++) this.missiles[i] = new Missile();
     }
 
-    public Missile[] getMissiles() {
-        return missiles;
-    }
-
-    public void setMissiles(Missile[] missiles) {
-        this.missiles = missiles;
-    }
-
-    public int getShotDistance() {
-        return shotDistance;
-    }
-
-    public void setShotDistance(int shotDistance) {
-        if (shotDistance > 0) this.shotDistance = shotDistance;
-        else throw new IllegalArgumentException("La distancia de dispar ha de ser més gran de 0");
-    }
+    // Getters
+    public Missile[] getMissiles() { return missiles; }
+    public int getShotDistance() { return shotDistance; }
 }
