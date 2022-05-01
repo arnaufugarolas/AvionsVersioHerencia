@@ -81,7 +81,7 @@ public class Controller {
 
             /*
             i.- Verificar que el motor estigui encès o no en les funcions que depenguin d’ell.. Accelerar, frenar, pujar, baixar,etc..
-            ii.- Podríem imaginar que per tal de poder enlairar-se necessitem una velocitat mínima de 180 kilòmetres hora.
+            ii.- Podríem imaginar que per tal de poder enlairar-se necessitem una velocitat mínima de 180 km/h.
             iii.- No podem passar de 500 metres d’alçada sense amagar el tren d’aterratge.
             iv.- No podem descendir més metres dels que tenim d’alçada actualment.
             v.- No podem treure el tren d’aterratge si tenim més alçada de 500 metres i anem a més de 300 km/h.
