@@ -55,15 +55,14 @@ public class Controller {
     }
 
     public static void manageAircraft() {
-                    /*
-            i.- Verificar que el motor estigui encès o no en les funcions que depenguin d’ell.. Accelerar, frenar, pujar, baixar,etc..
-            ii.- Podríem imaginar que per tal de poder enlairar-se necessitem una velocitat mínima de 180 km/h.
-            iii.- No podem passar de 500 metres d’alçada sense amagar el tren d’aterratge.
-            iv.- No podem descendir més metres dels que tenim d’alçada actualment.
-            v.- No podem treure el tren d’aterratge si tenim més alçada de 500 metres i anem a més de 300 km/h.
-            vi.- No podem aterrar amb velocitats superiors a 200 km/h i fora de la pista. En cas de que s’incompleixi,
-            L’avió s’estimbarà i automàticament el controlador mostrarà la informació avisant de que l’avio XXX s’ha estimbat i queda fora de l’espai.
-             */
+            //TODO: Implementar
+            // Verificar que el motor estigui encès o no en les funcions que depenguin d’ell.. Accelerar, frenar, pujar, baixar,etc..
+            // Podríem imaginar que per tal de poder enlairar-se necessitem una velocitat mínima de 180 km/h.
+            // No podem passar de 500 metres d’alçada sense amagar el tren d’aterratge.
+            // No podem descendir més metres dels que tenim d’alçada actualment.
+            // No podem treure el tren d’aterratge si tenim més alçada de 500 metres i anem a més de 300 km/h.
+            // No podem aterrar amb velocitats superiors a 200 km/h i fora de la pista. En cas de que s’incompleixi,
+            //      L’avió s’estimbarà i automàticament el controlador mostrarà la informació avisant de que l’avio XXX s’ha estimbat i queda fora de l’espai.
 
         String registration = f.nextString("Introdueix la matrícula de l'avió a gestionar", "Matrícula: ");
 
@@ -99,6 +98,7 @@ public class Controller {
                 case 'G' -> aircraft.setLandingGear(!aircraft.isLandingGear());
                 case 'H' -> aircraft.setOrientation();
                 case 'I' -> aircraft.setCoordinates();
+                //TODO: Implementar atacar avió comercial sospitós
                 case 'J' -> f.notImplemented();
                 case 'K' -> stop = true;
                 default -> f.printInRed("Introdueix una lletra correcta");
