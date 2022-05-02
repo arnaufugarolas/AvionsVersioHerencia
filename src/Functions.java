@@ -37,11 +37,11 @@ public class Functions {
             if (input.hasNextInt()){
                 intInput = input.nextInt();
                 if (intInput >= min && intInput <= max) correct = true;
-                else printInRed(msg + "\nIntrodueix un número entre " + min + " i " + max);
+                else printInRed(msg + "\nIntrodueix un numero entre " + min + " i " + max);
             }
             else {
                 input.nextLine();
-                printInRed("Introdueix un número");
+                printInRed("Introdueix un numero");
                 System.out.print(msg);
             }
         }
@@ -57,8 +57,9 @@ public class Functions {
             }
             else {
                 input.nextLine();
-                printInRed("Introdueix un número");
+                printInRed("Introdueix un numero");
                 System.out.print(msg);
+                
             }
         }
         return intInput;

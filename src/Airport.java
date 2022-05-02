@@ -46,11 +46,33 @@ public class Airport {
             if (this.numberAircraft < this.maximumAircraft) {
                 airport.add(aircraft);
                 numberAircraft++;
-                freeAirstrip = false;
+                freeAirstrip = true;
             }
-            else f.printInRed("S'ha arribat al màxim d'avions a gestionar (" + this.maximumAircraft + ")");
+            else f.printInRed("S'ha arribat al maxim d'avions a gestionar (" + this.maximumAircraft + ")");
         }
-        else f.printInRed("La pista no està lliure");
+        else f.printInRed("La pista no esta lliure");
+    }
+
+    public void checkAirstrip() {
+        if (this.numberAircraft == 0){ this.freeAirstrip = true; }
+        else {
+            for (Aircraft aircraft : this.airport) {
+                Coordinates cords = aircraft.getCoordinates();
+                if (cords.getX() == 100 && (cords.getY() >= 100 && cords.getY() <= 120)) {
+                    this.freeAirstrip = false;
+                    return;
+                }
+            }
+            this.freeAirstrip = true;
+        }
+    }
+
+    public void removeAircraft(Aircraft aircraft) {
+        if (this.airport.contains(aircraft)) {
+            this.airport.remove(aircraft);
+            this.numberAircraft--;
+        }
+        else f.printInRed("L'avio no existeix");
     }
 
     public void maintenance() {
@@ -62,7 +84,7 @@ public class Airport {
     }
 
     public void showInfo() {
-        System.out.println("\nSituació de les aeronaus: \n");
+        System.out.println("\nSituacio de les aeronaus: \n");
         for (Aircraft aircraft : this.airport) {
             System.out.println("Aeronau " + (airport.indexOf(aircraft) + 1));
             aircraft.showInfo();
@@ -79,6 +101,7 @@ public class Airport {
                 Coordinates cords2 = aircraftB.getCoordinates();
                 if (Math.abs(aircraftA.getAltitude() - aircraftB.getAltitude()) < 500) {
                     if (Math.abs(cords1.getX() - cords2.getX()) < 50 || Math.abs(cords1.getY() - cords2.getY()) < 50) {
+                        //TODO optimitzar esta parte
                         if (dangers.size() == 0) {
                             f.printInRed("\nHi ha un perill entre les aeronaus " + (airport.indexOf(aircraftA) + 1) + " i " + (airport.indexOf(aircraftB) + 1) + "!");
                             dangers.add(new Danger(aircraftA.getRegistration(), aircraftB.getRegistration()));
@@ -96,5 +119,4 @@ public class Airport {
             }
         }
     }
-
 }
