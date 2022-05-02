@@ -13,7 +13,7 @@ public class Controller {
             return;
         }
         if (!airport.isFreeAirstrip()) {
-            f.printInRed("La pista esta ocupada");
+            f.printInRed("La pistaesta ocupada");
             return;
         }
 
