@@ -4,16 +4,17 @@ public class Airport {
     final Functions f = new Functions();
 
     // Attributes
-    private final ArrayList<Aircraft> airport = new ArrayList<>();
+    private final ArrayList<Aircraft> airport;
     private final int maximumAircraft;
     private boolean freeAirstrip;
     private int numberAircraft;
 
     // Constructor
     public Airport(int maximumAircraft) {
+        this.maximumAircraft = maximumAircraft;
+        this.airport = new ArrayList<>();
         this.freeAirstrip = true;
         this.numberAircraft = 0;
-        this.maximumAircraft = maximumAircraft;
     }
 
     // Getters
@@ -46,7 +47,7 @@ public class Airport {
             if (this.numberAircraft < this.maximumAircraft) {
                 airport.add(aircraft);
                 numberAircraft++;
-                freeAirstrip = true;
+                freeAirstrip = false;
             }
             else f.printInRed("S'ha arribat al maxim d'avions a gestionar (" + this.maximumAircraft + ")");
         }
@@ -54,17 +55,16 @@ public class Airport {
     }
 
     public void checkAirstrip() {
-        if (this.numberAircraft == 0){ this.freeAirstrip = true; }
-        else {
+        if (this.numberAircraft != 0) {
             for (Aircraft aircraft : this.airport) {
                 Coordinates cords = aircraft.getCoordinates();
-                if (cords.getX() == 100 && (cords.getY() >= 100 && cords.getY() <= 120)) {
+                if (cords.getX() == 100 && (cords.getY() >= 100 && cords.getY() <= 120) && aircraft.getAltitude() == 0) {
                     this.freeAirstrip = false;
                     return;
                 }
             }
-            this.freeAirstrip = true;
         }
+        this.freeAirstrip = true;
     }
 
     public void removeAircraft(Aircraft aircraft) {
@@ -76,9 +76,11 @@ public class Airport {
     }
 
     public void maintenance() {
+        checkAirstrip();
         for (Aircraft aircraft : this.airport) {
             Coordinates cords = aircraft.getCoordinates();
-            if (cords.getX() > 1000 || cords.getX() < 0) this.airport.remove(aircraft);
+            if (aircraft.isDestroyed()) this.airport.remove(aircraft);
+            else if (cords.getX() > 1000 || cords.getX() < 0) this.airport.remove(aircraft);
             else if (cords.getY() > 1000 || cords.getY() < 0) this.airport.remove(aircraft);
         }
     }
@@ -101,7 +103,6 @@ public class Airport {
                 Coordinates cords2 = aircraftB.getCoordinates();
                 if (Math.abs(aircraftA.getAltitude() - aircraftB.getAltitude()) < 500) {
                     if (Math.abs(cords1.getX() - cords2.getX()) < 50 || Math.abs(cords1.getY() - cords2.getY()) < 50) {
-                        //TODO optimitzar esta parte
                         if (dangers.size() == 0) {
                             f.printInRed("\nHi ha un perill entre les aeronaus " + (airport.indexOf(aircraftA) + 1) + " i " + (airport.indexOf(aircraftB) + 1) + "!");
                             dangers.add(new Danger(aircraftA.getRegistration(), aircraftB.getRegistration()));
