@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Airport {
     final Functions f = new Functions();
-
+    
     // Attributes
     private final ArrayList<Aircraft> airport;
     private final int maximumAircraft;
     private boolean freeAirstrip;
     private int numberAircraft;
-
+    
     // Constructor
     public Airport(int maximumAircraft) {
         this.maximumAircraft = maximumAircraft;
@@ -16,17 +16,17 @@ public class Airport {
         this.freeAirstrip = true;
         this.numberAircraft = 0;
     }
-
+    
     // Getters
     public ArrayList<Aircraft> getAirport() { return this.airport; }
     public int getNumberAircraft() { return this.numberAircraft; }
     public int getMaximumAircraft() { return this.maximumAircraft; }
-
+    
     // Setters
     public void setFreeAirstrip(boolean freeAirstrip) { this.freeAirstrip = freeAirstrip; }
     public void setNumberAircraft(int numberAircraft) { this.numberAircraft = numberAircraft; }
     public boolean isFreeAirstrip() { return this.freeAirstrip;}
-
+    
     // Methods
     public boolean freeRegistration(String registration) {
         for (Aircraft aircraft : this.airport) {
@@ -34,14 +34,14 @@ public class Airport {
         }
         return true;
     }
-
+    
     public Aircraft aircraftByRegistration(String registration) {
         for (Aircraft aircraft : this.airport) {
             if (aircraft.getRegistration().equals(registration)) return aircraft;
         }
         return null;
     }
-
+    
     public void addAircraft(Aircraft aircraft) {
         if (this.freeAirstrip) {
             if (this.numberAircraft < this.maximumAircraft) {
@@ -53,7 +53,7 @@ public class Airport {
         }
         else f.printInRed("La pista no esta lliure");
     }
-
+    
     public void checkAirstrip() {
         if (this.numberAircraft != 0) {
             for (Aircraft aircraft : this.airport) {
@@ -66,7 +66,7 @@ public class Airport {
         }
         this.freeAirstrip = true;
     }
-
+    
     public void removeAircraft(Aircraft aircraft) {
         if (this.airport.contains(aircraft)) {
             this.airport.remove(aircraft);
@@ -74,7 +74,7 @@ public class Airport {
         }
         else f.printInRed("L'avio no existeix");
     }
-
+    
     public void maintenance() {
         checkAirstrip();
         for (Aircraft aircraft : this.airport) {
@@ -84,7 +84,7 @@ public class Airport {
             else if (cords.getY() > 1000 || cords.getY() < 0) this.airport.remove(aircraft);
         }
     }
-
+    
     public void showInfo() {
         System.out.println("\nSituacio de les aeronaus: \n");
         for (Aircraft aircraft : this.airport) {
@@ -93,7 +93,7 @@ public class Airport {
             System.out.println();
         }
     }
-
+    
     public void detectDangers() {
         ArrayList<Danger> dangers = new ArrayList<>();
         for (Aircraft aircraftA : this.airport) {
