@@ -14,7 +14,7 @@ public class Controller {
         }
         airport.checkAirstrip();
         if (!airport.isFreeAirstrip()) {
-            f.printInRed("La pistaesta ocupada");
+            f.printInRed("La pista esta ocupada");
             return;
         }
         
