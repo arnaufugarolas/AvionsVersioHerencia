@@ -31,7 +31,7 @@ public class Functions {
                 else printInRed(msg + "\nIntrodueix un numero entre " + min + " i " + max);
             }
             else {
-                input.nextLine();
+                input.next();
                 printInRed("Introdueix un numero");
                 System.out.print(msg);
             }
@@ -47,7 +47,7 @@ public class Functions {
                 correct = true;
             }
             else {
-                input.nextLine();
+                input.next();
                 printInRed("Introdueix un numero");
                 System.out.print(msg);
                 
