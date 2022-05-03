@@ -1,5 +1,5 @@
 public record Danger(String aircraftA, String AircraftB) {
-    // Setters
+    // Getters
     public String getAircraftA() { return aircraftA; }
     public String getAircraftB() { return AircraftB; }
 }

@@ -20,12 +20,12 @@ public class Airport {
     // Getters
     public ArrayList<Aircraft> getAirport() { return this.airport; }
     public int getNumberAircraft() { return this.numberAircraft; }
+    public boolean isFreeAirstrip() { return this.freeAirstrip;}
     public int getMaximumAircraft() { return this.maximumAircraft; }
     
     // Setters
     public void setFreeAirstrip(boolean freeAirstrip) { this.freeAirstrip = freeAirstrip; }
     public void setNumberAircraft(int numberAircraft) { this.numberAircraft = numberAircraft; }
-    public boolean isFreeAirstrip() { return this.freeAirstrip;}
     
     // Methods
     public boolean freeRegistration(String registration) {
@@ -76,13 +76,13 @@ public class Airport {
     }
     
     public void maintenance() {
-        checkAirstrip();
         for (Aircraft aircraft : this.airport) {
             Coordinates cords = aircraft.getCoordinates();
-            if (aircraft.isDestroyed()) this.airport.remove(aircraft);
-            else if (cords.getX() > 1000 || cords.getX() < 0) this.airport.remove(aircraft);
-            else if (cords.getY() > 1000 || cords.getY() < 0) this.airport.remove(aircraft);
+            if (aircraft.isDestroyed()) this.removeAircraft(aircraft);
+            else if (cords.getX() > 1000 || cords.getX() < 0) this.removeAircraft(aircraft);
+            else if (cords.getY() > 1000 || cords.getY() < 0) this.removeAircraft(aircraft);
         }
+        checkAirstrip();
     }
     
     public void showInfo() {
